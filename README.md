@@ -6,6 +6,9 @@ A full-stack application for tracking and displaying sales performance across di
 
 This application provides a dashboard to view top-performing sellers by month across different branches. It processes sales data from a CSV file and presents it through an interactive web interface.
 
+## AWS Link
+http://tmotask-frontend.s3-website-us-west-2.amazonaws.com/
+
 ## Tech Stack
 
 ### Backend (.NET 8)
