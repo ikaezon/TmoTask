@@ -1,0 +1,324 @@
+
+.container {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #f0f8ff 0%, #e6f3ff 100%);
+  padding: 1.5rem;
+}
+
+.maxWidth {
+  max-width: 72rem;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.header {
+  text-align: center;
+  
+  .titleContainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.75rem;
+    margin-bottom: 1rem;
+    
+    .iconWrapper {
+      padding: 0.75rem;
+      background-color: #2563eb;
+      border-radius: 50%;
+      
+      .icon {
+        height: 2rem;
+        width: 2rem;
+        color: white;
+      }
+    }
+    
+    .title {
+      font-size: 2.25rem;
+      font-weight: bold;
+      color: #111827;
+    }
+  }
+  
+  .subtitle {
+    font-size: 1.25rem;
+    color: #6b7280;
+    max-width: 32rem;
+    margin: 0 auto;
+  }
+}
+
+.card {
+  background: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(4px);
+  border-radius: 0.5rem;
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+  border: none;
+  
+  .cardHeader {
+    padding: 1.5rem 1.5rem 1rem 1.5rem;
+    
+    .cardTitle {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      font-size: 1.25rem;
+      font-weight: 600;
+      color: #374151;
+      
+      .cardIcon {
+        height: 1.25rem;
+        width: 1.25rem;
+        color: #2563eb;
+      }
+    }
+  }
+  
+  .cardContent {
+    padding: 0 1.5rem 1.5rem 1.5rem;
+  }
+}
+
+.branchSelector {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  
+  .label {
+    font-size: 0.875rem;
+    font-weight: 500;
+    color: #374151;
+  }
+  
+  .select {
+    width: 100%;
+    max-width: 24rem;
+    background-color: white;
+    border: 1px solid #d1d5db;
+    border-radius: 0.375rem;
+    padding: 0.5rem 0.75rem;
+    transition: border-color 0.2s;
+    
+    &:hover {
+      border-color: #60a5fa;
+    }
+    
+    &:focus {
+      outline: none;
+      border-color: #2563eb;
+      box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
+    }
+  }
+}
+
+.loadingCard {
+  .loadingContent {
+    padding: 2rem 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.75rem;
+    
+    .spinner {
+      animation: spin 1s linear infinite;
+      border-radius: 50%;
+      height: 2rem;
+      width: 2rem;
+      border: 2px solid transparent;
+      border-bottom-color: #2563eb;
+    }
+    
+    .loadingText {
+      font-size: 1.125rem;
+      color: #6b7280;
+    }
+  }
+}
+
+.errorCard {
+  background-color: #fef2f2;
+  border: 1px solid #fecaca;
+  
+  .errorContent {
+    padding: 1.5rem;
+    
+    .errorWrapper {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      color: #b91c1c;
+      
+      .errorIconWrapper {
+        padding: 0.5rem;
+        background-color: #fee2e2;
+        border-radius: 50%;
+        
+        .errorIcon {
+          height: 1.25rem;
+          width: 1.25rem;
+        }
+      }
+      
+      .errorTextWrapper {
+        .errorTitle {
+          font-weight: 600;
+        }
+        
+        .errorMessage {
+          font-size: 0.875rem;
+        }
+      }
+    }
+  }
+}
+
+.dataTable {
+  .tableHeader {
+    .tableTitle {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      font-size: 1.25rem;
+      font-weight: 600;
+      color: #374151;
+      
+      .tableIcon {
+        height: 1.25rem;
+        width: 1.25rem;
+        color: #2563eb;
+      }
+    }
+    
+    .tableSubtitle {
+      font-size: 0.875rem;
+      color: #6b7280;
+      margin-top: 0.25rem;
+    }
+  }
+  
+  .tableWrapper {
+    overflow-x: auto;
+    
+    .table {
+      width: 100%;
+      border-collapse: collapse;
+      
+      .tableHead {
+        background-color: #f9fafb;
+        border-bottom: 1px solid #e5e7eb;
+        
+        .tableHeadCell {
+          padding: 0.75rem;
+          text-align: left;
+          font-weight: 600;
+          color: #374151;
+          font-size: 0.875rem;
+          
+          &.textRight {
+            text-align: right;
+          }
+          
+          .headCellContent {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            
+            &.justifyEnd {
+              justify-content: flex-end;
+            }
+            
+            .headIcon {
+              height: 1rem;
+              width: 1rem;
+            }
+          }
+        }
+      }
+      
+      .tableBody {
+        .tableRow {
+          border-bottom: 1px solid #f3f4f6;
+          transition: background-color 0.2s;
+          
+          &:hover {
+            background-color: rgba(59, 130, 246, 0.05);
+          }
+          
+          .tableCell {
+            padding: 0.75rem;
+            color: #374151;
+            
+            &.fontMedium {
+              font-weight: 500;
+              color: #111827;
+            }
+            
+            &.textRight {
+              text-align: right;
+              font-family: ui-monospace, SFMono-Regular, "SF Mono", Consolas, "Liberation Mono", Menlo, monospace;
+            }
+            
+            &.fontSemibold {
+              font-weight: 600;
+            }
+            
+            .cellContent {
+              display: flex;
+              align-items: center;
+              justify-content: flex-end;
+              gap: 0.25rem;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.emptyState {
+  .emptyContent {
+    padding: 2rem 1.5rem;
+    text-align: center;
+    
+    .emptyIconWrapper {
+      padding: 1rem;
+      background-color: #f3f4f6;
+      border-radius: 50%;
+      width: 4rem;
+      height: 4rem;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      
+      .emptyIcon {
+        height: 2rem;
+        width: 2rem;
+        color: #9ca3af;
+      }
+    }
+    
+    .emptyTitle {
+      font-size: 1.125rem;
+      font-weight: 600;
+      color: #374151;
+      margin-top: 0.75rem;
+    }
+    
+    .emptyMessage {
+      color: #6b7280;
+      margin-top: 0.25rem;
+    }
+  }
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
